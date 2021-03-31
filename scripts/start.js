@@ -8,13 +8,15 @@ const WebpackDevServer = require('webpack-dev-server');
 const choosePort = require('choose-port');
 const open = require('open');
 
+const webpackConfig = require('../configs/webpack.config.js');
+
 const host =
   process.env.HOST ||
   (process.platform === 'win32' ? 'localhost' : '127.0.0.1');
 const port = process.env.PORT || 8080;
 const levelLog = process.env.LEVEL_LOG || 'none';
 
-const bootstrap = (config, contentBase) => {
+const start = (config, contentBase) => {
   const compiler = Webpack(config);
   const server = new WebpackDevServer(compiler, {
     host,
@@ -33,4 +35,13 @@ const bootstrap = (config, contentBase) => {
   );
 };
 
-module.exports = bootstrap;
+const bootstrap = async () => {
+  try {
+    start(webpackConfig, paths.devPath);
+  } catch (err) {
+    console.error(`\x1b[31mError\x1b[0m: ${err}`);
+    process.exit(1);
+  }
+};
+
+bootstrap();
