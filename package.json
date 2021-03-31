@@ -1,10 +1,11 @@
 {
   "name": "basic-react-scripts",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "index.js",
   "author": "Sandro Motyl",
   "license": "MIT",
   "dependencies": {
+    "child_process": "^1.0.2",
     "choose-port": "^0.3.2",
     "html-webpack-plugin": "^5.3.1",
     "open": "^8.0.4",
