@@ -12,7 +12,7 @@
     "basic-react-scripts": "index.js"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js start"
   },
   "dependencies": {
     "@babel/core": "^7.13.14",
