@@ -1,10 +1,18 @@
 {
   "name": "basic-react-scripts",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "index.js",
   "author": "Sandro Motyl",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smotyl/basic-react-scripts"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
+    "babel-loader": "^8.2.2",
     "child_process": "^1.0.2",
     "choose-port": "^0.3.2",
     "html-webpack-plugin": "^5.3.1",
