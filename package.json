@@ -1,12 +1,15 @@
 {
   "name": "basic-react-scripts",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "index.js",
   "author": "Sandro Motyl",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/smotyl/basic-react-scripts"
+  },
+  "bin": {
+    "basic-react-scripts": "index.js"
   },
   "scripts": {
     "start": "node index.js"
