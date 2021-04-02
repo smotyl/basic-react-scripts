@@ -19,6 +19,10 @@ process.env.HOST ||
 const port = process.env.PORT || 8080;
 const levelLog = process.env.LEVEL_LOG || 'none';
 
+const config = webpackConfig({
+  mode: 'development',
+});
+
 const start = (config, contentBase) => {
   const compiler = Webpack(config);
   const server = new WebpackDevServer(compiler, {
@@ -40,7 +44,7 @@ const start = (config, contentBase) => {
 
 const bootstrap = async () => {
   try {
-    start(webpackConfig, path.resolve(currDir, 'src'));
+    start(config, path.resolve(currDir, 'src'));
   } catch (err) {
     console.error(`\x1b[31mError\x1b[0m: ${err}`);
     process.exit(1);
