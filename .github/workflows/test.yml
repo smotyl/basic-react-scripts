@@ -1,0 +1,10 @@
+name: test
+
+on: push
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+    - name: test
+      run: yarn test

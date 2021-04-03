@@ -13,7 +13,8 @@
   },
   "scripts": {
     "start": "node index.js start",
-    "build": "node index.js build"
+    "build": "node index.js build",
+    "test": "echo test"
   },
   "dependencies": {
     "@babel/core": "^7.13.14",
