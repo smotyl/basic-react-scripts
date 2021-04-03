@@ -19,18 +19,20 @@ process.env.HOST ||
 const port = process.env.PORT || 8080;
 const levelLog = process.env.LEVEL_LOG || 'none';
 
-const start = (config, contentBase) => {
+const config = webpackConfig({
+  mode: 'development',
+});
+
+const start = () => {
   const compiler = Webpack(config);
   const server = new WebpackDevServer(compiler, {
     host,
-    contentBase,
+    contentBase: path.resolve(currDir, 'src'),
     watchContentBase: true,
     hot: true,
-    historyApiFallback: true,
     publicPath: '/',
     clientLogLevel: levelLog,
-    compress: true,
-    disableHostCheck: true
+    compress: true
   });
 
   choosePort(port, host, validPort =>
@@ -40,9 +42,9 @@ const start = (config, contentBase) => {
 
 const bootstrap = async () => {
   try {
-    start(webpackConfig, path.resolve(currDir, 'src'));
+    start();
   } catch (err) {
-    console.error(`\x1b[31mError\x1b[0m: ${err}`);
+    console.error(`Build error: ${err}`);
     process.exit(1);
   }
 };

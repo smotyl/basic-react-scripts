@@ -9,5 +9,5 @@
 ### Currently behavior
 <!-- Explain the current behavior and the problem with details -->
 
-### Expected behavor
+### Expected behavior
 <!-- Explain the implemented solution with details -->
