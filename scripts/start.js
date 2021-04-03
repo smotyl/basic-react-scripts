@@ -18,9 +18,11 @@ process.env.HOST ||
 (process.platform === 'win32' ? 'localhost' : '127.0.0.1');
 const port = process.env.PORT || 8080;
 const levelLog = process.env.LEVEL_LOG || 'none';
+const typescript = process.argv.slice(2).includes('--ts');
 
 const config = webpackConfig({
   mode: 'development',
+  typescript: typescript,
 });
 
 const start = () => {
