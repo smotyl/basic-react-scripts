@@ -5,9 +5,11 @@ process.env.BABEL_ENV = 'production';
 
 const Webpack = require('webpack');
 const webpackConfig = require('../configs/webpack.config.js');
+const typescript = process.argv.slice(2).includes('--ts');
 
 const config = webpackConfig({
   mode: 'production',
+  typescript: typescript,
 });
 
 const build = () => {
