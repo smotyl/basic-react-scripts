@@ -12,7 +12,8 @@
     "basic-react-scripts": "index.js"
   },
   "scripts": {
-    "start": "node index.js start"
+    "start": "node index.js start",
+    "build": "node index.js build"
   },
   "dependencies": {
     "@babel/core": "^7.13.14",
