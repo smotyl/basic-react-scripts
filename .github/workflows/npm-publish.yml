@@ -6,9 +6,9 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-      steps:
-      - name: login
-        run: npm login
-      
-      - name: publish
-        run: npm publish --access public
+    steps:
+    - name: login
+      run: npm login
+    
+    - name: publish
+      run: npm publish --access public
