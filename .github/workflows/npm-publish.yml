@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: login
+      run: npm config set registry https://registry.npmjs.org/
       run: npm login
     
     - name: publish
