@@ -11,8 +11,7 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-    - name: login
-      run: npm config set registry https://registry.npmjs.org/ && npm login
-    
     - name: publish
-      run: npm publish --access public
+    - uses: JS-DevTools/npm-publish@v1
+            with:
+              token: ${{ secrets.NPM_TOKEN }}
