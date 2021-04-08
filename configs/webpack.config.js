@@ -46,6 +46,10 @@ module.exports = (config) => {
     module: {
       rules: [
         typescript ? tsLoader : babelLoader,
+        {
+          test: /\.css$/i,
+          use: ["style-loader", "css-loader"],
+        },
       ]
     }
   }
