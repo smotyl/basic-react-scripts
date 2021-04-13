@@ -1,9 +1,10 @@
+const path = requerui('path');
 const { spawnSync } = require('child_process');
 const { AVAIBLE_SCRIPTS } = require('./constants');
 
 const executeScript = (script) => spawnSync(
   'node',
-  [`${__dirname}/scripts/${script}.js`, ...process.argv.slice(3)],
+  [path.resolve(__dirname, '../', 'scripts', `${script}.js`), ...process.argv.slice(3)],
   { stdio: 'inherit' }
 );
 
