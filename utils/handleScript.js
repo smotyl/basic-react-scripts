@@ -1,4 +1,4 @@
-const path = requerui('path');
+const path = require('path');
 const { spawnSync } = require('child_process');
 const { AVAIBLE_SCRIPTS } = require('./constants');
 
