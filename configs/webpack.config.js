@@ -34,9 +34,6 @@ module.exports = (config) => {
     resolve: {
       extensions: [ '.tsx', '.ts', '.js', '.jsx' ],
     },
-    devServer: {
-      contentBase: path.resolve(currDir, 'src'),
-    },
     plugins: [
       new HtmlWebpackPlugin({
         filename: 'index.html',
