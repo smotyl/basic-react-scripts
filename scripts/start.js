@@ -31,6 +31,7 @@ const start = () => {
     host,
     contentBase: path.resolve(currDir, 'src'),
     watchContentBase: true,
+    historyApiFallback: true,
     hot: true,
     publicPath: '/',
     clientLogLevel: levelLog,
