@@ -1,6 +1,6 @@
 {
   "name": "basic-react-scripts",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "main": "index.js",
   "author": "Sandro Motyl",
   "license": "MIT",
@@ -26,6 +26,7 @@
     "child_process": "^1.0.2",
     "choose-port": "^0.3.2",
     "css-loader": "^5.2.0",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
     "open": "^8.0.4",
     "style-loader": "^2.0.0",
