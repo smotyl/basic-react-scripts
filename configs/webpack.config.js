@@ -11,7 +11,16 @@ module.exports = (config) => {
     loader: require.resolve('babel-loader'),
     exclude: /node_modules/,
     options: {
-      presets: ["@babel/preset-env", "@babel/preset-react"],
+      presets: [
+        [
+        "@babel/preset-env",
+          {
+            "useBuiltIns": "usage",
+            "corejs": 3,
+            "targets": "> 0.25%, not dead" 
+          },
+        ],
+      "@babel/preset-react"],
     }
   };
 
