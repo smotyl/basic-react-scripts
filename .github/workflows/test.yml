@@ -1,0 +1,11 @@
+name: test
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: test
+      run: yarn test
+      working-directory: ./
